@@ -1,4 +1,50 @@
-<!doctype html><html lang=en-us><head><meta charset=utf-8><title>Wordpress Theme Deployment</title><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=alternate type=application/rss+xml href=https://blog.rbarbazz.com/index.xml title="rbarbazz's blog"><meta name=twitter:card content="summary"><meta name=twitter:title content="Wordpress Theme Deployment"><meta name=twitter:description content="Deploy a custom Wordpress theme with zero downtime using Github Actions."><link rel=stylesheet href=https://blog.rbarbazz.com/fontawesome/css/all.min.css><link id=dark-mode-theme rel=stylesheet href=https://blog.rbarbazz.com/css/dark.css><script>var darkTheme=document.getElementById('dark-mode-theme'),storedTheme=localStorage.getItem('dark-mode-storage');storedTheme==='dark'?darkTheme.disabled=!1:storedTheme==='light'&&(darkTheme.disabled=!0)</script><script src=https://blog.rbarbazz.com/js/main.bundle.js></script><script src=https://blog.rbarbazz.com/js/instantpage.min.js type=module defer></script><meta name=generator content="Hugo 0.83.1"></head><body><header><nav class=navbar><div class=nav><ul class=nav-links><li><a href=/ id=Home><em class="fas fa-home fa-lg"></em></a></li><li><a href=/tags id=Tags><em class="fas fa-tag fa-lg"></em></a></li></ul></div></nav><div class=intro-header><div class=container><div class=posts-heading><h1>Wordpress Theme Deployment</h1></div></div></div></header><div class=container role=main><article class=article class=blog-post><p>Deploy a custom Wordpress theme with zero downtime using Github Actions.</p><p>Build the project, <code>scp</code> the theme folder to the host. Link the new version and remove the old one.</p><p>Example workflow:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#f92672>name</span>: <span style=color:#ae81ff>Deployment</span>
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<title>Wordpress Theme Deployment</title>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel=alternate type=application/rss+xml href=https://blog.raphaelbarbazza.com/index.xml title="rbarbazz's blog">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Wordpress Theme Deployment">
+<meta name=twitter:description content="Deploy a custom Wordpress theme with zero downtime using Github Actions.">
+<link rel=stylesheet href=https://blog.raphaelbarbazza.com/fontawesome/css/all.min.css>
+<link id=dark-mode-theme rel=stylesheet href=https://blog.raphaelbarbazza.com/css/dark.css>
+<script>var darkTheme=document.getElementById('dark-mode-theme'),storedTheme=localStorage.getItem('dark-mode-storage');storedTheme==='dark'?darkTheme.disabled=!1:storedTheme==='light'&&(darkTheme.disabled=!0)</script>
+<script src=https://blog.raphaelbarbazza.com/js/main.bundle.js></script>
+<script src=https://blog.raphaelbarbazza.com/js/instantpage.min.js type=module defer></script>
+<meta name=generator content="Hugo 0.88.1">
+</head>
+<body>
+<header>
+<nav class=navbar>
+<div class=nav>
+<ul class=nav-links>
+<li>
+<a href=/ id=Home><em class="fas fa-home fa-lg"></em></a>
+</li>
+<li>
+<a href=/tags id=Tags><em class="fas fa-tag fa-lg"></em></a>
+</li>
+</ul>
+</div>
+</nav>
+<div class=intro-header>
+<div class=container>
+<div class=posts-heading>
+<h1>
+Wordpress Theme Deployment
+</h1>
+</div>
+</div>
+</div>
+</header>
+<div class=container role=main>
+<article class=article class=blog-post>
+<p>Deploy a custom Wordpress theme with zero downtime using Github Actions.</p>
+<p>Build the project, <code>scp</code> the theme folder to the host. Link the new version and remove the old one.</p>
+<p>Example workflow:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#f92672>name</span>: <span style=color:#ae81ff>Deployment</span>
 <span style=color:#f92672>on</span>:
   <span style=color:#f92672>push</span>:
     <span style=color:#f92672>branches</span>:
@@ -39,12 +85,32 @@
 </span><span style=color:#e6db74>            cp -r ${{ secrets.THEME_ABS_PATH }}-new ${{ secrets.THEME_ABS_PATH }}-old
 </span><span style=color:#e6db74>            ln -fsn ${{ secrets.THEME_ABS_PATH }}-old ${{ secrets.THEME_ABS_PATH }}
 </span><span style=color:#e6db74>            rm -rf ${{ secrets.THEME_ABS_PATH }}-new</span>            
-</code></pre></div><div class=blog-tags><a href=https://blog.rbarbazz.com/tags/wordpress/>wordpress</a>&nbsp;
-<a href=https://blog.rbarbazz.com/tags/ci/cd/>ci/cd</a>&nbsp;</div></article></div><footer><div><a href=https://github.com/rbarbazz name=Github><em class="fab fa-github fa-lg"></em></a><div class=container><p class="credits copyright"><a href=https://blog.rbarbazz.com/about></a>&nbsp;&copy;
+</code></pre></div>
+<div class=blog-tags>
+<a href=https://blog.raphaelbarbazza.com/tags/wordpress/>wordpress</a>&nbsp;
+<a href=https://blog.raphaelbarbazza.com/tags/ci/cd/>ci/cd</a>&nbsp;
+</div>
+</article>
+</div>
+<footer>
+<div>
+<a href=https://github.com/rbarbazz name=Github><em class="fab fa-github fa-lg"></em></a>
+<div class=container>
+<p class="credits copyright">
+<a href=https://blog.raphaelbarbazza.com/about></a>
+&nbsp;&copy;
 2021
 &nbsp;/&nbsp;
-<a href=https://blog.rbarbazz.com/>rbarbazz's blog</a>
+<a href=https://blog.raphaelbarbazza.com/>rbarbazz's blog</a>
 &nbsp;&ndash;&nbsp;
-<em class="fas fa-moon" id=dark-mode-toggle></em></p><p class="credits theme-by">Powered By <a href=https://gohugo.io>Hugo</a>&nbsp;
+<em class="fas fa-moon" id=dark-mode-toggle></em>
+</p>
+<p class="credits theme-by">
+Powered By <a href=https://gohugo.io>Hugo</a>&nbsp;
 Theme
-<a href=https://github.com/matsuyoshi30/harbor>Harbor</a></p></div></footer></body></html>
+<a href=https://github.com/matsuyoshi30/harbor>Harbor</a>
+</p>
+</div>
+</footer>
+</body>
+</html>

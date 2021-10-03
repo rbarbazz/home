@@ -1,4 +1,48 @@
-<!doctype html><html lang=en-us><head><meta charset=utf-8><title>Basic Dockerfile for a Node App</title><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=alternate type=application/rss+xml href=https://blog.rbarbazz.com/index.xml title="rbarbazz's blog"><meta name=twitter:card content="summary"><meta name=twitter:title content="Basic Dockerfile for a Node App"><meta name=twitter:description content="This is a simple Dockerfile that builds a full stack Javascript project."><link rel=stylesheet href=https://blog.rbarbazz.com/fontawesome/css/all.min.css><link id=dark-mode-theme rel=stylesheet href=https://blog.rbarbazz.com/css/dark.css><script>var darkTheme=document.getElementById('dark-mode-theme'),storedTheme=localStorage.getItem('dark-mode-storage');storedTheme==='dark'?darkTheme.disabled=!1:storedTheme==='light'&&(darkTheme.disabled=!0)</script><script src=https://blog.rbarbazz.com/js/main.bundle.js></script><script src=https://blog.rbarbazz.com/js/instantpage.min.js type=module defer></script><meta name=generator content="Hugo 0.83.1"></head><body><header><nav class=navbar><div class=nav><ul class=nav-links><li><a href=/ id=Home><em class="fas fa-home fa-lg"></em></a></li><li><a href=/tags id=Tags><em class="fas fa-tag fa-lg"></em></a></li></ul></div></nav><div class=intro-header><div class=container><div class=posts-heading><h1>Basic Dockerfile for a Node App</h1></div></div></div></header><div class=container role=main><article class=article class=blog-post><p>This is a simple Dockerfile that builds a full stack Javascript project.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-dockerfile data-lang=dockerfile><span style=color:#66d9ef>FROM</span><span style=color:#e6db74> node:14-alpine</span><span style=color:#960050;background-color:#1e0010>
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<title>Basic Dockerfile for a Node App</title>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel=alternate type=application/rss+xml href=https://blog.raphaelbarbazza.com/index.xml title="rbarbazz's blog">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Basic Dockerfile for a Node App">
+<meta name=twitter:description content="This is a simple Dockerfile that builds a full stack Javascript project.">
+<link rel=stylesheet href=https://blog.raphaelbarbazza.com/fontawesome/css/all.min.css>
+<link id=dark-mode-theme rel=stylesheet href=https://blog.raphaelbarbazza.com/css/dark.css>
+<script>var darkTheme=document.getElementById('dark-mode-theme'),storedTheme=localStorage.getItem('dark-mode-storage');storedTheme==='dark'?darkTheme.disabled=!1:storedTheme==='light'&&(darkTheme.disabled=!0)</script>
+<script src=https://blog.raphaelbarbazza.com/js/main.bundle.js></script>
+<script src=https://blog.raphaelbarbazza.com/js/instantpage.min.js type=module defer></script>
+<meta name=generator content="Hugo 0.88.1">
+</head>
+<body>
+<header>
+<nav class=navbar>
+<div class=nav>
+<ul class=nav-links>
+<li>
+<a href=/ id=Home><em class="fas fa-home fa-lg"></em></a>
+</li>
+<li>
+<a href=/tags id=Tags><em class="fas fa-tag fa-lg"></em></a>
+</li>
+</ul>
+</div>
+</nav>
+<div class=intro-header>
+<div class=container>
+<div class=posts-heading>
+<h1>
+Basic Dockerfile for a Node App
+</h1>
+</div>
+</div>
+</div>
+</header>
+<div class=container role=main>
+<article class=article class=blog-post>
+<p>This is a simple Dockerfile that builds a full stack Javascript project.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-dockerfile data-lang=dockerfile><span style=color:#66d9ef>FROM</span><span style=color:#e6db74> node:14-alpine</span><span style=color:#960050;background-color:#1e0010>
 </span><span style=color:#960050;background-color:#1e0010>
 </span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>EXPOSE</span><span style=color:#e6db74> 8080</span><span style=color:#960050;background-color:#1e0010>
 </span><span style=color:#960050;background-color:#1e0010>
@@ -16,16 +60,37 @@
 </span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>WORKDIR</span><span style=color:#e6db74> /home/node/app/server</span><span style=color:#960050;background-color:#1e0010>
 </span><span style=color:#960050;background-color:#1e0010>
 </span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>CMD</span> [<span style=color:#e6db74>&#34;npm&#34;</span>, <span style=color:#e6db74>&#34;start&#34;</span>]<span style=color:#960050;background-color:#1e0010>
-</span></code></pre></div><p>To start the container and expose a <code>.env</code> file:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>docker run --name app-name <span style=color:#ae81ff>\
+</span></code></pre></div><p>To start the container and expose a <code>.env</code> file:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>docker run --name app-name <span style=color:#ae81ff>\
 </span><span style=color:#ae81ff></span>    -p 8080:8080 <span style=color:#ae81ff>\
 </span><span style=color:#ae81ff></span>    -v /absolute/path/to/.env:/home/node/app/server/.env <span style=color:#ae81ff>\
 </span><span style=color:#ae81ff></span>    --restart unless-stopped -d image-name
-</code></pre></div><div class=blog-tags><a href=https://blog.rbarbazz.com/tags/docker/>docker</a>&nbsp;
-<a href=https://blog.rbarbazz.com/tags/node/>node</a>&nbsp;</div></article></div><footer><div><a href=https://github.com/rbarbazz name=Github><em class="fab fa-github fa-lg"></em></a><div class=container><p class="credits copyright"><a href=https://blog.rbarbazz.com/about></a>&nbsp;&copy;
+</code></pre></div>
+<div class=blog-tags>
+<a href=https://blog.raphaelbarbazza.com/tags/docker/>docker</a>&nbsp;
+<a href=https://blog.raphaelbarbazza.com/tags/node/>node</a>&nbsp;
+</div>
+</article>
+</div>
+<footer>
+<div>
+<a href=https://github.com/rbarbazz name=Github><em class="fab fa-github fa-lg"></em></a>
+<div class=container>
+<p class="credits copyright">
+<a href=https://blog.raphaelbarbazza.com/about></a>
+&nbsp;&copy;
 2021
 &nbsp;/&nbsp;
-<a href=https://blog.rbarbazz.com/>rbarbazz's blog</a>
+<a href=https://blog.raphaelbarbazza.com/>rbarbazz's blog</a>
 &nbsp;&ndash;&nbsp;
-<em class="fas fa-moon" id=dark-mode-toggle></em></p><p class="credits theme-by">Powered By <a href=https://gohugo.io>Hugo</a>&nbsp;
+<em class="fas fa-moon" id=dark-mode-toggle></em>
+</p>
+<p class="credits theme-by">
+Powered By <a href=https://gohugo.io>Hugo</a>&nbsp;
 Theme
-<a href=https://github.com/matsuyoshi30/harbor>Harbor</a></p></div></footer></body></html>
+<a href=https://github.com/matsuyoshi30/harbor>Harbor</a>
+</p>
+</div>
+</footer>
+</body>
+</html>

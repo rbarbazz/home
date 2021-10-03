@@ -1,8 +1,55 @@
-<!doctype html><html lang=en-us><head><meta charset=utf-8><title>Automated DB Backups on B2</title><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=alternate type=application/rss+xml href=https://blog.rbarbazz.com/index.xml title="rbarbazz's blog"><meta name=twitter:card content="summary"><meta name=twitter:title content="Automated DB Backups on B2"><meta name=twitter:description content="Setup a cron job to export and upload a Postgres DB backup to a B2 bucket."><link rel=stylesheet href=https://blog.rbarbazz.com/fontawesome/css/all.min.css><link id=dark-mode-theme rel=stylesheet href=https://blog.rbarbazz.com/css/dark.css><script>var darkTheme=document.getElementById('dark-mode-theme'),storedTheme=localStorage.getItem('dark-mode-storage');storedTheme==='dark'?darkTheme.disabled=!1:storedTheme==='light'&&(darkTheme.disabled=!0)</script><script src=https://blog.rbarbazz.com/js/main.bundle.js></script><script src=https://blog.rbarbazz.com/js/instantpage.min.js type=module defer></script><meta name=generator content="Hugo 0.83.1"></head><body><header><nav class=navbar><div class=nav><ul class=nav-links><li><a href=/ id=Home><em class="fas fa-home fa-lg"></em></a></li><li><a href=/tags id=Tags><em class="fas fa-tag fa-lg"></em></a></li></ul></div></nav><div class=intro-header><div class=container><div class=posts-heading><h1>Automated DB Backups on B2</h1></div></div></div></header><div class=container role=main><article class=article class=blog-post><p>Setup a cron job to export and upload a Postgres DB backup to a B2 bucket.</p><h2 id=setup-b2>Setup B2</h2><p>Install the B2 cli tool.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>sudo apt install python3 python3-pip -y
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<title>Automated DB Backups on B2</title>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel=alternate type=application/rss+xml href=https://blog.raphaelbarbazza.com/index.xml title="rbarbazz's blog">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Automated DB Backups on B2">
+<meta name=twitter:description content="Setup a cron job to export and upload a Postgres DB backup to a B2 bucket.">
+<link rel=stylesheet href=https://blog.raphaelbarbazza.com/fontawesome/css/all.min.css>
+<link id=dark-mode-theme rel=stylesheet href=https://blog.raphaelbarbazza.com/css/dark.css>
+<script>var darkTheme=document.getElementById('dark-mode-theme'),storedTheme=localStorage.getItem('dark-mode-storage');storedTheme==='dark'?darkTheme.disabled=!1:storedTheme==='light'&&(darkTheme.disabled=!0)</script>
+<script src=https://blog.raphaelbarbazza.com/js/main.bundle.js></script>
+<script src=https://blog.raphaelbarbazza.com/js/instantpage.min.js type=module defer></script>
+<meta name=generator content="Hugo 0.88.1">
+</head>
+<body>
+<header>
+<nav class=navbar>
+<div class=nav>
+<ul class=nav-links>
+<li>
+<a href=/ id=Home><em class="fas fa-home fa-lg"></em></a>
+</li>
+<li>
+<a href=/tags id=Tags><em class="fas fa-tag fa-lg"></em></a>
+</li>
+</ul>
+</div>
+</nav>
+<div class=intro-header>
+<div class=container>
+<div class=posts-heading>
+<h1>
+Automated DB Backups on B2
+</h1>
+</div>
+</div>
+</div>
+</header>
+<div class=container role=main>
+<article class=article class=blog-post>
+<p>Setup a cron job to export and upload a Postgres DB backup to a B2 bucket.</p>
+<h2 id=setup-b2>Setup B2</h2>
+<p>Install the B2 cli tool.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>sudo apt install python3 python3-pip -y
 pip3 install setuptools
 pip3 install b2
 b2 authorize-account $APPLICATION_KEY_ID $APPLICATION_KEY
-</code></pre></div><p>Then paste the following into a <code>.sh</code> file.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e>#!/bin/bash
+</code></pre></div><p>Then paste the following into a <code>.sh</code> file.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e>#!/bin/bash
 </span><span style=color:#75715e></span>
 DB_NAME<span style=color:#f92672>=</span>mydb
 FILENAME<span style=color:#f92672>=</span><span style=color:#e6db74>${</span>DB_NAME<span style=color:#e6db74>}</span>_<span style=color:#66d9ef>$(</span>date +<span style=color:#e6db74>&#39;%Y_%m_%d&#39;</span><span style=color:#66d9ef>)</span>.sql
@@ -12,15 +59,36 @@ USER<span style=color:#f92672>=</span>bob
 pg_dump $DB_NAME &gt; ~/$FILENAME
 /home/$USER/.local/bin/b2 upload-file $BUCKET_NAME ~/$FILENAME $FILENAME
 rm ~/$FILENAME
-</code></pre></div><p>Then <code>chmod +x</code> the script, <code>crontab -e</code> and paste the following:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#ae81ff>0</span> <span style=color:#ae81ff>1</span> * * * /absolute/path/to/the/script
+</code></pre></div><p>Then <code>chmod +x</code> the script, <code>crontab -e</code> and paste the following:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#ae81ff>0</span> <span style=color:#ae81ff>1</span> * * * /absolute/path/to/the/script
 </code></pre></div><p>The script will run everyday at 01:00.
-You can then set custom lifecycle rules on Backblaze to retain backups for X number of days.</p><div class=blog-tags><a href=https://blog.rbarbazz.com/tags/b2/>b2</a>&nbsp;
-<a href=https://blog.rbarbazz.com/tags/cron/>cron</a>&nbsp;
-<a href=https://blog.rbarbazz.com/tags/postgres/>postgres</a>&nbsp;</div></article></div><footer><div><a href=https://github.com/rbarbazz name=Github><em class="fab fa-github fa-lg"></em></a><div class=container><p class="credits copyright"><a href=https://blog.rbarbazz.com/about></a>&nbsp;&copy;
+You can then set custom lifecycle rules on Backblaze to retain backups for X number of days.</p>
+<div class=blog-tags>
+<a href=https://blog.raphaelbarbazza.com/tags/b2/>b2</a>&nbsp;
+<a href=https://blog.raphaelbarbazza.com/tags/cron/>cron</a>&nbsp;
+<a href=https://blog.raphaelbarbazza.com/tags/postgres/>postgres</a>&nbsp;
+</div>
+</article>
+</div>
+<footer>
+<div>
+<a href=https://github.com/rbarbazz name=Github><em class="fab fa-github fa-lg"></em></a>
+<div class=container>
+<p class="credits copyright">
+<a href=https://blog.raphaelbarbazza.com/about></a>
+&nbsp;&copy;
 2021
 &nbsp;/&nbsp;
-<a href=https://blog.rbarbazz.com/>rbarbazz's blog</a>
+<a href=https://blog.raphaelbarbazza.com/>rbarbazz's blog</a>
 &nbsp;&ndash;&nbsp;
-<em class="fas fa-moon" id=dark-mode-toggle></em></p><p class="credits theme-by">Powered By <a href=https://gohugo.io>Hugo</a>&nbsp;
+<em class="fas fa-moon" id=dark-mode-toggle></em>
+</p>
+<p class="credits theme-by">
+Powered By <a href=https://gohugo.io>Hugo</a>&nbsp;
 Theme
-<a href=https://github.com/matsuyoshi30/harbor>Harbor</a></p></div></footer></body></html>
+<a href=https://github.com/matsuyoshi30/harbor>Harbor</a>
+</p>
+</div>
+</footer>
+</body>
+</html>
