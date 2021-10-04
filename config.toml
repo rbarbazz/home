@@ -1,27 +1,23 @@
 baseURL = "https://blog.raphaelbarbazza.com/"
 languageCode = "en-us"
-title = "rbarbazz's blog"
-theme = "harbor"
-paginate = 3
+title = "rbarbazz"
+theme = "minimal-bootstrap-hugo-theme"
 
-[outputs]
-  section = ["HTML"]
+[taxonomies]
+  tag = "tags"
 
-[[params.nav]]
-  identifier = "home"
-  name = "Home"
-  icon = "fas fa-home fa-lg"
-  url = ""
-  weight = 3
+[permalinks]
+  post = "/:filename/"
 
-[[params.nav]]
-  identifier = "tags"
+[params]
+showPostSummary = true
+
+[menu]
+  [[menu.nav]]
+  name = "Posts"
+  url = "/"
+  weight = 1
+  [[menu.nav]]
   name = "Tags"
-  icon = "fas fa-tag fa-lg"
-  url = "tags"
-  weight = 3
-
-[[params.social]]
-  name="Github"
-  url="https://github.com/rbarbazz"
-  icon = "fab fa-github fa-lg"
+  url = "/tags/"
+  weight = 2
