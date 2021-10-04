@@ -1,46 +1,29 @@
-<!doctype html><html lang=en-us>
+<!doctype html><html lang=en>
 <head>
 <meta charset=utf-8>
-<title>Postgres Quickstart</title>
-<meta http-equiv=x-ua-compatible content="IE=edge">
-<meta name=viewport content="width=device-width,initial-scale=1">
-<link rel=alternate type=application/rss+xml href=https://blog.raphaelbarbazza.com/index.xml title="rbarbazz's blog">
-<meta name=twitter:card content="summary">
-<meta name=twitter:title content="Postgres Quickstart">
-<meta name=twitter:description content="Here is how to get started with Postgres on Ubuntu.">
-<link rel=stylesheet href=https://blog.raphaelbarbazza.com/fontawesome/css/all.min.css>
-<link id=dark-mode-theme rel=stylesheet href=https://blog.raphaelbarbazza.com/css/dark.css>
-<script>var darkTheme=document.getElementById('dark-mode-theme'),storedTheme=localStorage.getItem('dark-mode-storage');storedTheme==='dark'?darkTheme.disabled=!1:storedTheme==='light'&&(darkTheme.disabled=!0)</script>
-<script src=https://blog.raphaelbarbazza.com/js/main.bundle.js></script>
-<script src=https://blog.raphaelbarbazza.com/js/instantpage.min.js type=module defer></script>
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <meta name=generator content="Hugo 0.88.1">
+<link rel=apple-touch-icon sizes=180x180 href=https://blog.raphaelbarbazza.com/apple-touch-icon.png>
+<link rel=icon type=image/png sizes=32x32 href=https://blog.raphaelbarbazza.com/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=https://blog.raphaelbarbazza.com/favicon-16x16.png>
+<link rel=manifest href=https://blog.raphaelbarbazza.com/site.webmanifest>
+<link rel=mask-icon href=https://blog.raphaelbarbazza.com/safari-pinned-tab.svg color>
+<meta name=msapplication-TileColor content>
+<meta name=theme-color content>
+<link rel=stylesheet href=https://blog.raphaelbarbazza.com/css/bootstrap.min.css>
+<title>Postgres Quickstart | rbarbazz</title>
+<style>body{min-width:300px}.custom-navbar{margin-bottom:1em;height:60px}.custom-navbar a{display:inline-block;padding:18px 0;margin-right:1em;font-weight:700}.custom-navbar a:hover,.custom-navbar a:focus{text-decoration:none}@media print{.custom-navbar{display:none}}article{padding-bottom:1em}img{max-width:100%}body{background-color:#fff}body{color:#212529}a{color:#007bff}a:hover,a:focus{color:#0056b3}.custom-navbar{background-color:#212529}.custom-navbar a{color:rgba(255,255,255,.75)}.custom-navbar a:hover,.custom-navbar a:focus{color:#fff}.container{max-width:800px}</style>
 </head>
 <body>
-<header>
-<nav class=navbar>
-<div class=nav>
-<ul class=nav-links>
-<li>
-<a href=/ id=Home><em class="fas fa-home fa-lg"></em></a>
-</li>
-<li>
-<a href=/tags id=Tags><em class="fas fa-tag fa-lg"></em></a>
-</li>
-</ul>
+<nav class=custom-navbar>
+<div class=container>
+<a href=/>Posts</a>
+<a href=/tags/>Tags</a>
 </div>
 </nav>
-<div class=intro-header>
 <div class=container>
-<div class=posts-heading>
-<h1>
-Postgres Quickstart
-</h1>
-</div>
-</div>
-</div>
-</header>
-<div class=container role=main>
-<article class=article class=blog-post>
+<article>
+<h1>Postgres Quickstart</h1>
 <p>Here is how to get started with Postgres on Ubuntu.</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e># Install the packages</span>
 sudo apt update <span style=color:#f92672>&amp;&amp;</span> sudo apt install postgresql postgresql-contrib -y
@@ -53,30 +36,7 @@ sudo -u postgres createdb -O username db_name
 </code></pre></div><p>The connection URL will be:</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>postgresql://username:password@localhost:5432/db_name
 </code></pre></div><p>If your password contains a <code>%</code> sign it needs to be replaced by <code>%25</code>.</p>
-<div class=blog-tags>
-<a href=https://blog.raphaelbarbazza.com/tags/postgres/>postgres</a>&nbsp;
-</div>
 </article>
 </div>
-<footer>
-<div>
-<a href=https://github.com/rbarbazz name=Github><em class="fab fa-github fa-lg"></em></a>
-<div class=container>
-<p class="credits copyright">
-<a href=https://blog.raphaelbarbazza.com/about></a>
-&nbsp;&copy;
-2021
-&nbsp;/&nbsp;
-<a href=https://blog.raphaelbarbazza.com/>rbarbazz's blog</a>
-&nbsp;&ndash;&nbsp;
-<em class="fas fa-moon" id=dark-mode-toggle></em>
-</p>
-<p class="credits theme-by">
-Powered By <a href=https://gohugo.io>Hugo</a>&nbsp;
-Theme
-<a href=https://github.com/matsuyoshi30/harbor>Harbor</a>
-</p>
-</div>
-</footer>
 </body>
 </html>
