@@ -1,0 +1,50 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=generator content="Hugo 0.88.1">
+<link rel=apple-touch-icon sizes=180x180 href=https://blog.raphaelbarbazza.com/apple-touch-icon.png>
+<link rel=icon type=image/png sizes=32x32 href=https://blog.raphaelbarbazza.com/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=https://blog.raphaelbarbazza.com/favicon-16x16.png>
+<link rel=manifest href=https://blog.raphaelbarbazza.com/site.webmanifest>
+<link rel=mask-icon href=https://blog.raphaelbarbazza.com/safari-pinned-tab.svg color>
+<meta name=msapplication-TileColor content>
+<meta name=theme-color content>
+<link rel=stylesheet href=https://blog.raphaelbarbazza.com/css/bootstrap.min.css>
+<title>Use Prettier with VSCode | rbarbazz</title>
+<style>body{min-width:300px}.custom-navbar{margin-bottom:1em;height:60px}.custom-navbar a{display:inline-block;padding:18px 0;margin-right:1em;font-weight:700}.custom-navbar a:hover,.custom-navbar a:focus{text-decoration:none}@media print{.custom-navbar{display:none}}article{padding-bottom:1em}img{max-width:100%}body{background-color:#fff}body{color:#212529}a{color:#007bff}a:hover,a:focus{color:#0056b3}.custom-navbar{background-color:#212529}.custom-navbar a{color:rgba(255,255,255,.75)}.custom-navbar a:hover,.custom-navbar a:focus{color:#fff}.container{max-width:800px}</style>
+</head>
+<body>
+<nav class=custom-navbar>
+<div class=container>
+<a href=/>Posts</a>
+<a href=/tags/>Tags</a>
+</div>
+</nav>
+<div class=container>
+<article>
+<h1>Use Prettier with VSCode</h1>
+<p>Forget about manually running Prettier.</p>
+<p>First you need to install the <a href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode">VSCode Prettier extension</a>.</p>
+<p>Open the command palette and type &ldquo;Preferences: Open Settings (JSON)&rdquo;. Then enable the &ldquo;format on save&rdquo; setting globally:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json>{
+  <span style=color:#f92672>&#34;editor.formatOnSave&#34;</span>: <span style=color:#66d9ef>true</span>
+}
+</code></pre></div><p>You can also set it for a specific language:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json>{
+  <span style=color:#f92672>&#34;[javascript]&#34;</span>: {
+    <span style=color:#f92672>&#34;editor.formatOnSave&#34;</span>: <span style=color:#66d9ef>true</span>
+  }
+}
+</code></pre></div><p>You might also want to set Prettier as your default formatter for Javascript(or any language you want to use it for). If you don&rsquo;t, you&rsquo;ll see a prompt the first time you try to format your code.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json>{
+  <span style=color:#f92672>&#34;[javascript]&#34;</span>: {
+    <span style=color:#f92672>&#34;editor.formatOnSave&#34;</span>: <span style=color:#66d9ef>true</span>,
+    <span style=color:#f92672>&#34;editor.defaultFormatter&#34;</span>: <span style=color:#e6db74>&#34;esbenp.prettier-vscode&#34;</span>
+  }
+}
+</code></pre></div><p>Now everytime you save a Javascript file, Prettier will format it. The extension will pick up local configuration files. If there is none, it will use the default global config.</p>
+</article>
+</div>
+</body>
+</html>
