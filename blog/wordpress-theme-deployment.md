@@ -5,11 +5,12 @@ draft: false
 tags:
   - wordpress
   - ci/cd
+authors: rbarbazz
 ---
 
 Deploy a custom Wordpress theme with zero downtime using Github Actions.
 
-<!--more-->
+<!--truncate-->
 
 Build the project, `scp` the theme folder to the host. Link the new version and remove the old one.
 

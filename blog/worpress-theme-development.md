@@ -4,11 +4,12 @@ date: 2021-03-03T22:14:23-08:00
 draft: false
 tags:
   - wordpress
+authors: rbarbazz
 ---
 
 The easiest way I have found to work on a custom Wordpress theme is to use Local.
 
-<!--more-->
+<!--truncate-->
 
 ### Requirements
 

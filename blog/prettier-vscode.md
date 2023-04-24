@@ -5,11 +5,12 @@ draft: false
 tags:
   - javascript
   - vscode
+authors: rbarbazz
 ---
 
 Forget about manually running Prettier.
 
-<!--more-->
+<!--truncate-->
 
 First you need to install the [VSCode Prettier extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode).
 

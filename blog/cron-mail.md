@@ -5,11 +5,12 @@ draft: false
 tags:
   - cron
   - unix
+authors: rbarbazz
 ---
 
 To see the output from cron you need to have a Mail Transfer Agent (MTA) installed.
 
-<!--more-->
+<!--truncate-->
 
 ```bash
 sudo apt install postfix

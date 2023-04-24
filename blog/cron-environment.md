@@ -5,11 +5,12 @@ draft: false
 tags:
   - cron
   - unix
+authors: rbarbazz
 ---
 
 Cron often runs in an almost empty environment.
 
-<!--more-->
+<!--truncate-->
 
 The default path is very minimal. Therefore you should either use absolute paths or explicitly set the `PATH` variable when using binaries.
 

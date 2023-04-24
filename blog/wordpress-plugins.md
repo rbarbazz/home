@@ -4,11 +4,12 @@ date: 2021-04-15T22:36:44-07:00
 draft: false
 tags:
   - wordpress
+authors: rbarbazz
 ---
 
 A list of plugins that I regularly use for Wordpress sites.
 
-<!--more-->
+<!--truncate-->
 
 - [ACF](https://wordpress.org/plugins/advanced-custom-fields/), create custom fields for a specific page or template. Use case examples: making text editable, images for a carousel or just any custom content field really.
 

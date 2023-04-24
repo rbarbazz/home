@@ -5,11 +5,12 @@ draft: false
 tags:
   - docker
   - ci/cd
+authors: rbarbazz
 ---
 
 You can use [Watchtower](https://github.com/containrrr/watchtower/) to automate the deployment of a dockerized app on a VPS.
 
-<!--more-->
+<!--truncate-->
 
 The Watchtower container will pull new images from Docker Hub or another registry and restart the container with updated images.
 
