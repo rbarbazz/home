@@ -7,7 +7,6 @@ const darkCodeTheme = require('prism-react-renderer/themes/nightOwl')
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'rbarbazz',
-  tagline: 'A blog by Raphaël Barbazza',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -18,9 +17,8 @@ const config = {
   trailingSlash: false,
 
   // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'rbarbazz', // Usually your GitHub org/user name.
-  projectName: 'blog', // Usually your repo name.
+  organizationName: 'rbarbazz',
+  projectName: 'blog',
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -38,6 +36,7 @@ const config = {
         docs: false,
         pages: false,
         blog: {
+          blogDescription: "rbarbazz's blog",
           blogSidebarCount: 'ALL',
           blogSidebarTitle: 'All posts',
           editUrl: 'https://github.com/rbarbazz/blog/tree/master/',
