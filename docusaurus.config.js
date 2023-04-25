@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/nightOwl')
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'rbarbazz',
-  favicon: 'img/favicon.ico',
+  favicon: 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📝</text></svg>',
 
   // Set the production url of your site here
   url: 'https://blog.raphaelbarbazza.com',
