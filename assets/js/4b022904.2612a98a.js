@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[8384],{5096:e=>{e.exports=JSON.parse('{"permalink":"/blog/tags/cron","page":1,"postsPerPage":3,"totalPages":1,"totalCount":3,"blogDescription":"rbarbazz\'s blog","blogTitle":"Blog"}')}}]);
