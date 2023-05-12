@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[7192],{5573:e=>{e.exports=JSON.parse('{"permalink":"/blog/tags/ci-cd","page":1,"postsPerPage":3,"totalPages":1,"totalCount":2,"blogDescription":"rbarbazz\'s blog","blogTitle":"Blog"}')}}]);
