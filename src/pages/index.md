@@ -7,6 +7,4 @@ description: I'm a developer based in Vancouver, BC ⛰️
 
 I'm a developer based in **Vancouver, BC** ⛰️ 🌊 ☔
 
-📧 [Send me an email](mailto:hello@raphaelbarbazza.com)  
-📖 [Read my blog](/blog)  
-🐙 [Follow me on Github](https://github.com/rbarbazz)
+📧 [Send me an email](mailto:hello@raphaelbarbazza.com)

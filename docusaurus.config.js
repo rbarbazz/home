@@ -68,6 +68,12 @@ const config = {
             label: 'Tags',
             position: 'left',
           },
+          {
+            href: 'https://github.com/rbarbazz',
+            position: 'right',
+            className: 'header-github-link',
+            'aria-label': 'GitHub repository',
+          },
         ],
       },
       footer: {
