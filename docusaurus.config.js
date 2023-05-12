@@ -11,7 +11,7 @@ const config = {
     'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>',
 
   // Set the production url of your site here
-  url: 'https://blog.raphaelbarbazza.com',
+  url: 'https://www.raphaelbarbazza.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -19,7 +19,7 @@ const config = {
 
   // GitHub pages deployment config.
   organizationName: 'rbarbazz',
-  projectName: 'blog',
+  projectName: 'home',
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -37,7 +37,7 @@ const config = {
         docs: false,
         pages: { routeBasePath: '/' },
         blog: {
-          blogDescription: "rbarbazz's blog",
+          blogDescription: "Raph's blog",
           blogSidebarCount: 'ALL',
           blogSidebarTitle: 'All posts',
           editUrl: 'https://github.com/rbarbazz/blog/tree/master/',
