@@ -7,7 +7,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/nightOwl')
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'rbarbazz',
-  favicon: 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📝</text></svg>',
+  favicon:
+    'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>',
 
   // Set the production url of your site here
   url: 'https://blog.raphaelbarbazza.com',
@@ -34,14 +35,14 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: false,
-        pages: false,
+        pages: { routeBasePath: '/' },
         blog: {
           blogDescription: "rbarbazz's blog",
           blogSidebarCount: 'ALL',
           blogSidebarTitle: 'All posts',
           editUrl: 'https://github.com/rbarbazz/blog/tree/master/',
           postsPerPage: 3,
-          routeBasePath: '/',
+          routeBasePath: '/blog',
           showReadingTime: true,
         },
         theme: {
@@ -55,18 +56,17 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Blog',
+        title: 'Home',
         items: [
           {
-            to: '/tags',
-            label: 'Tags',
+            to: '/blog',
+            label: 'Blog',
             position: 'left',
           },
           {
-            href: 'https://raphaelbarbazza.com/',
-            label: 'Home',
+            to: '/blog/tags',
+            label: 'Tags',
             position: 'left',
-            target: '_self',
           },
         ],
       },
