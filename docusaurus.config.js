@@ -32,7 +32,7 @@ const config = {
   scripts: [
     {
       src: 'https://analytics.umami.is/script.js',
-      'data-website-id':'59b1f583-c0e3-47ee-b064-38a7c80e0700',
+      'data-website-id': '59b1f583-c0e3-47ee-b064-38a7c80e0700',
       async: true,
     },
   ],
@@ -48,7 +48,7 @@ const config = {
           blogDescription: "Raph's blog",
           blogSidebarCount: 'ALL',
           blogSidebarTitle: 'All posts',
-          editUrl: 'https://github.com/rbarbazz/blog/tree/master/',
+          editUrl: 'https://github.com/rbarbazz/home/tree/master/',
           postsPerPage: 3,
           routeBasePath: '/blog',
           showReadingTime: true,
