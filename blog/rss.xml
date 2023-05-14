@@ -4,10 +4,19 @@
         <title>rbarbazz Blog</title>
         <link>https://www.raphaelbarbazza.com/blog</link>
         <description>rbarbazz Blog</description>
-        <lastBuildDate>Fri, 22 Oct 2021 02:22:19 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 14 May 2023 23:38:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Copy labels from an existing repository]]></title>
+            <link>https://www.raphaelbarbazza.com/blog/copy-labels-from-an-existing-repo</link>
+            <guid>https://www.raphaelbarbazza.com/blog/copy-labels-from-an-existing-repo</guid>
+            <pubDate>Sun, 14 May 2023 23:38:00 GMT</pubDate>
+            <description><![CDATA[I recently learned how to copy labels from one repository to another.]]></description>
+            <content:encoded><![CDATA[<p>I recently learned how to copy labels from one repository to another.</p><p>As far as I know it's the easiest way to bring existing Github labels to a new or existing repository. Creating a new repository from a template doesn't seem to include labels at this time.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="install-github-cli">Install Github CLI<a href="#install-github-cli" class="hash-link" aria-label="Direct link to Install Github CLI" title="Direct link to Install Github CLI">​</a></h2><p>Start by installing the <a href="https://cli.github.com/" target="_blank" rel="noopener noreferrer">Github CLI</a> if you haven't done so already.</p><p>Next, you'll have to login with <a href="https://cli.github.com/manual/gh_auth_login" target="_blank" rel="noopener noreferrer"><code>gh auth login</code></a>.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="clone-your-labels">Clone your labels<a href="#clone-your-labels" class="hash-link" aria-label="Direct link to Clone your labels" title="Direct link to Clone your labels">​</a></h2><p>Github CLI provides <a href="https://cli.github.com/manual/gh_label_clone" target="_blank" rel="noopener noreferrer">a very convenient label cloning command</a> that lets you copy all of your labels at once:</p><div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#403f53;--prism-background-color:#FBFBFB"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-shell codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#403f53"><span class="token plain">gh label clone username/source-repo --repo username/destination-repo</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg class="copyButtonIcon_y97N" viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg class="copyButtonSuccessIcon_LjdS" viewBox="0 0 24 24"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div><p>The above command will copy all the labels but won't delete existing labels in the destination repository.</p>]]></content:encoded>
+            <category>github</category>
+        </item>
         <item>
             <title><![CDATA[Use Prettier with VSCode]]></title>
             <link>https://www.raphaelbarbazza.com/blog/prettier-vscode</link>
