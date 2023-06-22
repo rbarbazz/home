@@ -4,6 +4,8 @@
 const lightCodeTheme = require('prism-react-renderer/themes/nightOwlLight')
 const darkCodeTheme = require('prism-react-renderer/themes/nightOwl')
 
+const PROD_DOMAIN = 'www.raphaelbarbazza.com'
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'rbarbazz',
@@ -11,7 +13,7 @@ const config = {
     'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>',
 
   // Set the production url of your site here
-  url: 'https://www.raphaelbarbazza.com',
+  url: `https://${PROD_DOMAIN}`,
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -34,6 +36,7 @@ const config = {
       src: 'https://analytics.umami.is/script.js',
       'data-website-id': '59b1f583-c0e3-47ee-b064-38a7c80e0700',
       async: true,
+      'data-domains': PROD_DOMAIN,
     },
   ],
 
