@@ -19,7 +19,7 @@
 }
 
 .highlighted-text {
-  background-color: var(--ifm-color-primary-lightest);
+  background-color: var(--ifm-color-primary);
   border-radius: 0.25rem;
   color: var(--ifm-font-color-base-inverse);
   padding: 0.125rem;
