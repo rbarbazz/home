@@ -4,7 +4,6 @@ date: 2023-05-14T15:38:00-08:00
 draft: false
 tags:
   - github
-authors: rbarbazz
 ---
 
 I recently learned how to copy labels from one repository to another.

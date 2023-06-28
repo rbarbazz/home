@@ -5,7 +5,6 @@ draft: false
 tags:
   - wordpress
   - ci/cd
-authors: rbarbazz
 ---
 
 Deploy a custom Wordpress theme with zero downtime using Github Actions.

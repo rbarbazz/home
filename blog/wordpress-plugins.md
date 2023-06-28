@@ -4,7 +4,6 @@ date: 2021-04-15T22:36:44-07:00
 draft: false
 tags:
   - wordpress
-authors: rbarbazz
 ---
 
 A list of plugins that I regularly use for Wordpress sites.

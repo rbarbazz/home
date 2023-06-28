@@ -5,7 +5,6 @@ draft: false
 tags:
   - docker
   - node
-authors: rbarbazz
 ---
 
 This is a simple Dockerfile that builds a full stack Javascript project.

@@ -6,7 +6,6 @@ tags:
   - b2
   - cron
   - postgres
-authors: rbarbazz
 ---
 
 Setup a cron job to export and upload a Postgres DB backup to a B2 bucket.

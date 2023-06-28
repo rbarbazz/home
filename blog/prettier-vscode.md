@@ -5,7 +5,6 @@ draft: false
 tags:
   - javascript
   - vscode
-authors: rbarbazz
 ---
 
 Forget about manually running Prettier.

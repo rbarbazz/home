@@ -5,7 +5,6 @@ draft: false
 tags:
   - cron
   - unix
-authors: rbarbazz
 ---
 
 Cron often runs in an almost empty environment.

@@ -5,7 +5,6 @@ draft: false
 tags:
   - typescript
   - eslint
-authors: rbarbazz
 ---
 
 ESLint can be used alongside Typescript to enforce coding standards.
