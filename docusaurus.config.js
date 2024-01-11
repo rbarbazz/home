@@ -1,8 +1,9 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/nightOwlLight')
-const darkCodeTheme = require('prism-react-renderer/themes/nightOwl')
+const { themes } = require('prism-react-renderer')
+const lightCodeTheme = themes.github
+const darkCodeTheme = themes.dracula
 
 const PROD_DOMAIN = 'www.raphaelbarbazza.com'
 
@@ -80,6 +81,7 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+        additionalLanguages: ['bash', 'json', 'php', 'docker'],
       },
     }),
 }
