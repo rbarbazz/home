@@ -42,7 +42,7 @@ const Home = () => (
         ></iframe>
         <p>
           If you want to contact me, you can{' '}
-          <a href="mailto:hello@raphaelbarbazza.com">send me an email</a>.
+          <a href="mailto:hello@rbarbazz.com">send me an email</a>.
         </p>
       </div>
     </main>
