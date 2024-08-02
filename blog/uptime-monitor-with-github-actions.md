@@ -29,7 +29,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check URL
-        run: curl -sSf raphaelbarbazza.com -m 30 > /dev/null
+        run: curl -sSf rbarbazz.com -m 30 > /dev/null
 ```
 
 We schedule our action to run every 5 minute and send a request to the website we want to monitor. The `-sSf` options tell curl to be silent while still failing when the server returns an error code.
