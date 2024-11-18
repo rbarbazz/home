@@ -55,13 +55,6 @@
   }
 }
 
-.highlighted-text {
-  background-color: var(--ifm-color-primary);
-  border-radius: 0.25rem;
-  color: var(--ifm-color-white);
-  padding: 0.125rem;
-}
-
 .spotify-iframe {
   border-radius: 0.75rem;
   margin-bottom: var(--ifm-paragraph-margin-bottom);

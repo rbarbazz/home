@@ -1,0 +1,6 @@
+.highlighted-text {
+  background-color: var(--ifm-color-primary);
+  border-radius: 0.25rem;
+  color: var(--ifm-color-white);
+  padding: 0.125rem;
+}

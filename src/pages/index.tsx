@@ -1,6 +1,7 @@
 import Layout from '@theme/Layout'
 import React from 'react'
 
+import Highlight from '../components/Highlight'
 import classes from '../css/home.module.css'
 
 const Home = () => (
@@ -15,15 +16,15 @@ const Home = () => (
           <div>
             <p>
               {`I'm a Web Developer based in `}
-              <span className={classes['highlighted-text']}>BC, Canada</span>.
+              <Highlight>BC, Canada</Highlight>.
             </p>
             <p>
               {`I specialize in `}
-              <span className={classes['highlighted-text']}>React</span>
+              <Highlight>React</Highlight>
               {` and `}
-              <span className={classes['highlighted-text']}>NodeJS</span>
+              <Highlight>NodeJS</Highlight>
               {`, but I also work with `}
-              <span className={classes['highlighted-text']}>Python</span>.
+              <Highlight>Python</Highlight>.
             </p>
           </div>
           <img
@@ -34,7 +35,7 @@ const Home = () => (
         </div>
         <p>
           {`When I code, I often listen to `}
-          <span className={classes['highlighted-text']}>Liquid DnB</span>:
+          <Highlight>Liquid DnB</Highlight>:
         </p>
         <iframe
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
@@ -56,21 +57,25 @@ const Home = () => (
               <a href="https://nozerodays.rbarbazz.com/" target="_blank">
                 No Zero Days
               </a>
-              : a reading tracker built with AlpineJS and TailwindCSS.
+              : a reading tracker built with <Highlight>AlpineJS</Highlight>
+              {` and `}
+              <Highlight>TailwindCSS</Highlight>.
             </li>
             <li>
               <a href="https://journaling.rbarbazz.com" target="_blank">
                 Daily Journaling Prompt
               </a>
               : a static site that updates itself every day with a random
-              journaling prompt, using Github Actions.
+              journaling prompt, using <Highlight>Github Actions</Highlight>.
             </li>
             <li>
               <a href="https://github.com/rbarbazz/pals" target="_blank">
                 Pals
               </a>
-              : a mobile app built with React Native and Expo that helps you
-              stay connected with your friends and family.
+              : a mobile app built with <Highlight>React Native</Highlight>
+              {` and `}
+              <Highlight>Expo</Highlight> that helps you stay connected with
+              your friends and family.
             </li>
           </ul>
         </p>
