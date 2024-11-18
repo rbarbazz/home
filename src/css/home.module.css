@@ -12,6 +12,7 @@
 .main > div,
 .header {
   max-width: 600px;
+  width: 100%;
 }
 
 .header {

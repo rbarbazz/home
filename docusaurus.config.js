@@ -71,16 +71,6 @@ const config = {
             position: 'left',
           },
           {
-            href: 'https://nozerodays.rbarbazz.com/',
-            label: 'No Zero Days',
-            position: 'left',
-          },
-          {
-            href: 'https://journaling.rbarbazz.com',
-            label: 'Journaling',
-            position: 'left',
-          },
-          {
             href: 'https://github.com/rbarbazz',
             position: 'right',
             className: 'header-github-link',

@@ -49,6 +49,35 @@ const Home = () => (
           {`To contact me, send me an email at `}
           <span className={classes.email}>hello[at]rbarbazz.com</span>.
         </p>
+        <p>
+          Here are some of the latest things I built:
+          <ul>
+            <li>
+              <a href="https://nozerodays.rbarbazz.com/" target="_blank">
+                No Zero Days
+              </a>
+              : a reading tracker built with AlpineJS and TailwindCSS.
+            </li>
+            <li>
+              <a href="https://journaling.rbarbazz.com" target="_blank">
+                Daily Journaling Prompt
+              </a>
+              : a static site that updates itself every day with a random
+              journaling prompt, using Github Actions.
+            </li>
+            <li>
+              <a href="https://github.com/rbarbazz/pals" target="_blank">
+                Pals
+              </a>
+              : a mobile app built with React Native and Expo that helps you
+              stay connected with your friends and family.
+            </li>
+          </ul>
+        </p>
+        <p>
+          I don't <a href="/blog">blog</a> these days but you're welcome to
+          check out my old posts.
+        </p>
       </div>
     </main>
   </Layout>
