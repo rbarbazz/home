@@ -58,6 +58,10 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        disableSwitch: true,
+        respectPrefersColorScheme: true,
+      },
       navbar: {
         title: 'Home',
         items: [
@@ -85,7 +89,6 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
         copyright: 'Built with Docusaurus.',
       },
       prism: {

@@ -9,23 +9,63 @@
   margin-top: 1.25rem;
 }
 
-.main > div {
+.main > div,
+.header {
   max-width: 600px;
+}
+
+.header {
+  column-gap: 0.5rem;
+  display: flex;
+  width: 100%;
+}
+
+@media (max-width: 575px) {
+  .header {
+    justify-content: center;
+  }
+}
+
+.header > div {
+  background-color: var(--ifm-color-primary);
+  border-radius: 0.25rem;
+  flex-shrink: 0;
+  width: 4px;
+}
+
+.header > h2 {
+  margin: 0;
+}
+
+.bio {
+  align-items: center;
+  display: flex;
 }
 
 .portrait {
   border-radius: 50%;
+  border: 4px solid var(--ifm-color-primary);
   max-width: 180px;
+}
+
+@media (max-width: 575px) {
+  .portrait {
+    display: none;
+  }
 }
 
 .highlighted-text {
   background-color: var(--ifm-color-primary);
   border-radius: 0.25rem;
-  color: var(--ifm-font-color-base-inverse);
+  color: var(--ifm-color-white);
   padding: 0.125rem;
 }
 
 .spotify-iframe {
   border-radius: 0.75rem;
   margin-bottom: var(--ifm-paragraph-margin-bottom);
+}
+
+.email {
+  color: var(--ifm-link-color);
 }
