@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkhome=self.webpackChunkhome||[]).push([[2727],{721:a=>{a.exports=JSON.parse('{"tag":{"label":"cron","permalink":"/blog/tags/cron","allTagsPath":"/blog/tags","count":3,"unlisted":false},"listMetadata":{"permalink":"/blog/tags/cron","page":1,"postsPerPage":3,"totalPages":1,"totalCount":3,"blogDescription":"Raph\'s blog","blogTitle":"Blog"}}')}}]);

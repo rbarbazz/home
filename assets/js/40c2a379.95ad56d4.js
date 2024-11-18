@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkhome=self.webpackChunkhome||[]).push([[5264],{2312:e=>{e.exports=JSON.parse('{"permalink":"/blog/tags/postgres","page":1,"postsPerPage":3,"totalPages":1,"totalCount":2,"blogDescription":"Raph\'s blog","blogTitle":"Blog"}')}}]);

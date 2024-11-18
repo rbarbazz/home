@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkhome=self.webpackChunkhome||[]).push([[7455],{9013:a=>{a.exports=JSON.parse('{"tag":{"label":"unix","permalink":"/blog/tags/unix","allTagsPath":"/blog/tags","count":2,"unlisted":false},"listMetadata":{"permalink":"/blog/tags/unix","page":1,"postsPerPage":3,"totalPages":1,"totalCount":2,"blogDescription":"Raph\'s blog","blogTitle":"Blog"}}')}}]);

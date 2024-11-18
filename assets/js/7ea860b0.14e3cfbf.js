@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkhome=self.webpackChunkhome||[]).push([[9788],{4991:a=>{a.exports=JSON.parse('{"tag":{"label":"ci/cd","permalink":"/blog/tags/ci-cd","allTagsPath":"/blog/tags","count":2,"unlisted":false},"listMetadata":{"permalink":"/blog/tags/ci-cd","page":1,"postsPerPage":3,"totalPages":1,"totalCount":2,"blogDescription":"Raph\'s blog","blogTitle":"Blog"}}')}}]);
