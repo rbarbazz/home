@@ -4,10 +4,7 @@ import React from 'react'
 import classes from '../css/home.module.css'
 
 const Home = () => (
-  <Layout
-    title="Home"
-    description="I'm a web developer based in Vancouver, BC."
-  >
+  <Layout title="Home" description="I'm a Web Developer based in BC, Canada.">
     <main className={classes.main}>
       <header className={classes.header}>
         <div></div>
