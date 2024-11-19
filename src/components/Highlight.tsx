@@ -1,7 +1,7 @@
-import commonClasses from '../css/common.module.css'
+import classes from '../css/Highlight.module.css'
 
 const Highlight = ({ children }) => {
-  return <span className={commonClasses['highlighted-text']}>{children}</span>
+  return <span className={classes['highlighted-text']}>{children}</span>
 }
 
 export default Highlight
