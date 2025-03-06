@@ -3,11 +3,6 @@ article {
   margin: 0 auto;
 }
 
-.spotify-iframe {
-  border-radius: 0.75rem;
-  margin-bottom: var(--ifm-paragraph-margin-bottom);
-}
-
 .email {
   color: var(--ifm-link-color);
 }
