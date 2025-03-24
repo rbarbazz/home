@@ -78,9 +78,6 @@ const config = {
           },
         ],
       },
-      footer: {
-        copyright: 'Built with Docusaurus.',
-      },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
