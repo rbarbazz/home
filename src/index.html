@@ -3,11 +3,49 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home | rbarbazz</title>
+    <title>rbarbazz</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>♨️</text></svg>"
+      type="image/svg+xml"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Home | rbarbazz</h1>
-    <p>WIP</p>
+    <main class="container">
+      <picture>
+        <source srcset="raph-ai-portrait.png?as=avif" type="image/avif" />
+        <source srcset="raph-ai-portrait.png?as=webp" type="image/webp" />
+        <img
+          src="raph-ai-portrait.png"
+          alt="Raphaël Barbazza"
+          class="profile-photo"
+        />
+      </picture>
+      <h1 class="name">
+        Raphaël Barbazza<br />
+        <span class="username">rbarbazz</span>
+      </h1>
+      <p class="bio">I'm Raph, a software engineer based in BC, Canada.</p>
+      <div class="links">
+        <a
+          href="https://github.com/rbarbazz"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="link"
+          >GitHub</a
+        >
+        <span class="separator">•</span>
+        <a
+          href="https://linkedin.com/in/rbarbazz"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="link"
+          >LinkedIn</a
+        >
+        <span class="separator">•</span>
+        <span class="email">hello[at]rbarbazz.com</span>
+      </div>
+    </main>
   </body>
 </html>

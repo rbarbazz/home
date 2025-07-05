@@ -1,8 +1,181 @@
+/* Fonts */
+@font-face {
+  font-family: 'Fira Code';
+  src: url('./fonts/FiraCode-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  src: url('./fonts/FiraCode-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  src: url('./fonts/FiraCode-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Gruvbox Color Scheme */
+:root {
+  --bg-primary: #282828;
+  --fg-primary: #ebdbb2;
+  --fg-secondary: #928374;
+  --accent: #83a598;
+  --accent-hover: #7daea3;
+  --aqua: #689d6a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
-  color-scheme: light dark;
-  font-family: system-ui;
+  height: 100%;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Fira Code', monospace;
+  background-color: var(--bg-primary);
+  color: var(--fg-primary);
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  text-align: center;
+  max-width: 600px;
+  padding: 2rem;
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+  border: 3px solid var(--accent);
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.name {
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.username {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--aqua);
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.bio {
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+  color: var(--fg-secondary);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.link {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.link:hover {
+  color: var(--accent-hover);
+  background-color: rgba(131, 165, 152, 0.1);
+}
+
+.separator {
+  color: var(--fg-secondary);
+  font-weight: 300;
+}
+
+.email {
+  color: var(--accent);
+  font-weight: 400;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .profile-photo {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 1.5rem;
+  }
+
+  .name {
+    font-size: 1.8rem;
+  }
+
+  .bio {
+    font-size: 1rem;
+  }
+
+  .links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .separator {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-photo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+  }
+
+  .name {
+    font-size: 1.5rem;
+  }
+
+  .bio {
+    font-size: 0.95rem;
+  }
 }
