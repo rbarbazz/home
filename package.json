@@ -1,14 +1,14 @@
 {
-  "name": "parcel-vanilla-starter",
+  "name": "home",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "source": "src/index.html",
   "scripts": {
     "start": "parcel",
     "build": "parcel build"
   },
-  "dependencies": {},
   "devDependencies": {
-    "parcel": "^2.14.0"
+    "parcel": "^2.14.0",
+    "prettier": "^3.6.2"
   }
 }
