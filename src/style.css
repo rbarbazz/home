@@ -27,7 +27,6 @@
 :root {
   --bg-primary: #282828;
   --fg-primary: #ebdbb2;
-  --fg-secondary: #928374;
   --accent: #83a598;
   --accent-hover: #7daea3;
   --aqua: #689d6a;
@@ -123,7 +122,7 @@ body {
 }
 
 .separator {
-  color: var(--fg-secondary);
+  color: var(--fg-primary);
   font-weight: 300;
 }
 
