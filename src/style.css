@@ -126,6 +126,10 @@ body {
   font-weight: 300;
 }
 
+.email > span {
+  display: none;
+}
+
 .email {
   color: var(--accent);
   font-weight: 400;
