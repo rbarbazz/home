@@ -1,18 +1,20 @@
 {
   "name": "home",
-  "private": true,
   "version": "1.0.0",
-  "volta": {
-    "node": "22.0.0"
-  },
+  "private": true,
   "source": "src/index.html",
   "scripts": {
-    "start": "parcel",
-    "build": "parcel build"
+    "build": "parcel build",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
+    "start": "parcel"
   },
   "devDependencies": {
-    "parcel": "^2.14.0",
-    "prettier": "^3.6.2",
+    "oxfmt": "^0.64.0",
+    "parcel": "^2.16.4",
     "sharp": "^0.33.5"
+  },
+  "volta": {
+    "node": "24.19.0"
   }
 }
