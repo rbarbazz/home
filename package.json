@@ -12,7 +12,7 @@
   "devDependencies": {
     "oxfmt": "^0.64.0",
     "parcel": "^2.16.4",
-    "sharp": "^0.33.5"
+    "sharp": "^0.35.0"
   },
   "volta": {
     "node": "24.19.0"
